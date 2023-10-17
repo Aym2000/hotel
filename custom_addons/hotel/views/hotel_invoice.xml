@@ -1,0 +1,62 @@
+
+
+<odoo>
+    <data>
+        <!-- Define the form view -->
+        <record id="view_form_hotel_invoice" model="ir.ui.view">
+            <field name="name">view_form_hotel_invoice</field>
+            <field name="model">hotel.invoice</field>
+            <field name="arch" type="xml">
+                <form>
+                <header>
+                <field name="state" widget="statusbar"/>
+                </header>
+                    <sheet>
+                        <group>
+                        
+                            <field name="reservation_no" />
+                            <field name="customer_id" />
+                            <field name="room_id"/>
+                            <field name="invoice_date"/>
+                            <field name="date_check_in"/>
+                            <field name="date_check_out"/>
+                            <field name="actual_price"/>
+
+                            <!-- Add more fields as needed -->
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_tree_hotel_invoice" model="ir.ui.view">
+            <field name="name">view_tree_hotel_invoice</field>
+            <field name="model">hotel.invoice</field>
+            <field name="arch" type="xml">
+                <tree>
+
+                    <field name="reservation_no" />
+                            <field name="customer_id" />
+                            <field name="room_id"/>
+                            <field name="invoice_date"/>
+                            <field name="date_check_in"/>
+                            <field name="date_check_out"/>
+                            <field name="actual_price"/>
+                            <field name="state"/>
+                   
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="hotel_invoice_act_window_action" model="ir.actions.act_window">
+            <field name="name">Invoice</field>
+            <field name="res_model">hotel.invoice</field>
+            <field name="view_mode">tree,form</field>
+            
+        </record>
+
+    </data>
+</odoo>
+
+

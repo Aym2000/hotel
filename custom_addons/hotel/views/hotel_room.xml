@@ -1,0 +1,48 @@
+
+
+<odoo>
+    <data>
+        <!-- Define the form view -->
+        <record id="view_form_hotel_room" model="ir.ui.view">
+            <field name="name">view_form_hotel_room</field>
+            <field name="model">hotel.room</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="room_no" />
+                            <!-- <field name="category_id" /> -->
+                            <field name="price" />
+                            <field name="minmum_price" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+       
+
+        
+        <record id="view_tree_hotel_room" model="ir.ui.view">
+            <field name="name">view_tree_hotel_room</field>
+            <field name="model">hotel.room</field>
+            <field name="arch" type="xml">
+                <tree>
+                   <field name="room_no" />
+                    <!-- <field name="category_id" /> -->
+                    <field name="price" />
+                    <field name="minmum_price" />
+                </tree>
+            </field>
+        </record>
+        
+        <record id="hotel_room_act_window_action" model="ir.actions.act_window">
+            <field name="name">Rooms</field>
+            <field name="res_model">hotel.room</field>
+            <field name="view_mode">tree,form</field>
+            <!-- <field name="view_id">view_hotel_customer_tree</field> -->
+
+        </record>
+    
+    </data>
+</odoo>

@@ -1,0 +1,56 @@
+
+
+<odoo>
+    <data>
+        <!-- Define the form view -->
+        <record id="view_form_hotel_catagory" model="ir.ui.view">
+            <field name="name">view_form_hotel_catagory</field>
+            <field name="model">hotel.catagory</field>
+            <field name="arch" type="xml">
+                <form>
+                 <header>
+                    
+                    <button name = "addratio" string = "Add ratio" type = "object"/>
+                        
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="employee_id" widget="many2many_tags"/>
+                        </group>
+                         <field name="room_ids">
+                            
+                            <tree editable="bottom">
+                                <field name="room_no"/>
+                                <field name="price"/>
+                                <field name="minmum_price"/>
+                            </tree>
+                         </field>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_hotel_customer_tree" model="ir.ui.view">
+            <field name="name">hotel.catagory.tree</field>
+            <field name="name">NOR</field>
+
+            <field name="model">hotel.catagory</field>
+            
+            <field name="arch" type="xml">
+                <tree>
+                   <field name="name" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="hotel_room_catagory_act_window_action" model="ir.actions.act_window">
+            <field name="name">Category</field>
+            <field name="res_model">hotel.catagory</field>
+            <field name="view_mode">tree,form</field>
+            <!-- <field name="view_id">view_hotel_customer_tree</field> -->
+
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,33 @@
+<odoo>
+
+<data>
+
+        <menuitem id="menu_hotel_root" name="HOTELS" sequence="20"/>
+
+        <menuitem id="menu_hotel_customer" name="Customer" parent="menu_hotel_root" action="hotel_customer_act_window" sequence="20"/>
+
+        <menuitem id="menu_hotel_invoice" name="invoice" parent="menu_hotel_root" action="hotel_invoice_act_window_action" sequence="20"/>
+
+        <menuitem id="menu_hotel_room_catagory" name="room catagory" parent="menu_hotel_root" action="hotel_room_catagory_act_window_action" sequence="20"/>
+
+        <menuitem id="menu_hotel_room" name="room" parent="menu_hotel_root" action="hotel_room_act_window_action" sequence="20" />
+
+        
+         <record id="hotel_country_act_window_action" model="ir.actions.act_window">
+            <field name="name">ayman countries</field>
+            <field name="res_model">res.country</field>
+            <field name="view_mode">tree,form</field>
+            <!-- <field name="view_id">view_hotel_customer_tree</field> -->
+
+        </record>
+
+        <menuitem id="menu_hotel_res_country" name="Country" parent="menu_hotel_root" action="hotel_country_act_window_action" sequence="20"/>
+
+        <!-- <menuitem id="menu_hotel_res_country" name="Country" parent="menu_hotel_root" action="base.action_country" sequence="20"/> -->
+            
+
+
+
+</data>
+
+</odoo>

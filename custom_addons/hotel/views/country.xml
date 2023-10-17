@@ -1,0 +1,22 @@
+<odoo>
+
+
+    <data>
+        <record id="view_hotel_customer_form" model="ir.ui.view">
+            <field name="name">view_hotel_customer_form</field>
+            <field name="model">res.country</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="email"/>
+                            <field name="country_id"/>
+                            <field name="passport_no"/>
+                            <field name="nationality"/>
+                        </group>
+                    </sheet>
+                </form>
+
+            </fie ld>
+        </record>
